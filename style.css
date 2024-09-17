@@ -7,21 +7,26 @@ body {
     height: 100vh;
     background-color: #f0f0f0; /* Optional background color */
 }
+
 .gallery {
     display: flex;
     overflow-x: auto;
-    white-space: nowrap;
+    max-width: 100%; /* Ensure the gallery does not exceed the viewport width */
     padding: 20px;
+    justify-content: center; /* Center the images horizontally */
+    gap: 10px; /* Optional: Add spacing between images */
 }
 
 .gallery img {
-    width: 300px;
-    height: auto;
-    margin-right: 10px;
+    width: 300px; /* Fixed width for images */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-img {
-    max-width: 100%;
-    height: auto; /* Maintain aspect ratio */
-  }
+
+/* Optional: Responsive design adjustments */
+@media (max-width: 600px) {
+    .gallery img {
+        width: 200px; /* Adjust width for smaller screens */
+    }
+}
