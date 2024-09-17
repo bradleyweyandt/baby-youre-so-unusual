@@ -10,11 +10,12 @@ body {
 
 .gallery {
     display: flex;
-    flex-direction: column;
-    max-width: 100%; /* Ensure the gallery does not exceed the viewport width */
+    flex-direction: column; /* Stack images vertically */
+    justify-content: center;
+    align-items: center; /* Center the images */
+    gap: 20px; /* Space between the images */
     padding: 20px;
-    justify-content: center; /* Center the images horizontally */
-    gap: 10px; /* Optional: Add spacing between images */
+
 }
 
 .gallery img {
@@ -22,11 +23,4 @@ body {
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Optional: Responsive design adjustments */
-@media (max-width: 600px) {
-    .gallery img {
-        width: 200px; /* Adjust width for smaller screens */
-    }
 }
