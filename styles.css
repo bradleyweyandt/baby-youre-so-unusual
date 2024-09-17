@@ -10,7 +10,7 @@ body {
 
 .gallery {
     display: flex;
-    overflow-x: auto;
+    flex-direction: column;
     max-width: 100%; /* Ensure the gallery does not exceed the viewport width */
     padding: 20px;
     justify-content: center; /* Center the images horizontally */
