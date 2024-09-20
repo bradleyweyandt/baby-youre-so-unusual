@@ -40,6 +40,14 @@
     </div>
 
     <script>
+        // Ensure all info sections are hidden on page load
+        window.onload = function() {
+            const infoSections = document.querySelectorAll('.info');
+            infoSections.forEach(section => {
+                section.style.display = 'none';
+            });
+        };
+
         function toggleInfo(index) {
             const infoSection = document.getElementById(`info-section-${index}`);
             const button = infoSection.previousElementSibling;
@@ -56,6 +64,7 @@
 </body>
 </html>
 <!-- terminal -->
+<!-- save all -->
 <!-- git add .
 git commit -m "message"   
 git push origin main -->
