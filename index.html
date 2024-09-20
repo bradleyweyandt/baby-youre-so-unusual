@@ -11,7 +11,7 @@
         <div class="image-container">
             <img src="images/cat.jpg" alt="Cat 1" loading="lazy">
             <button class="toggle-btn" onclick="toggleInfo(0)">Show More Info</button>
-            <div class="info" id="info-section-0">
+            <div class="info" id="info-section-0" style="display: none;">
                 <input type="text" value="Cat Name: Whiskers" readonly>
                 <input type="text" value="Breed: Maine Coon" readonly>
                 <input type="text" value="Age: 4 years" readonly>
@@ -21,7 +21,7 @@
         <div class="image-container">
             <img src="image2.jpg" alt="Cat 2" loading="lazy">
             <button class="toggle-btn" onclick="toggleInfo(1)">Show More Info</button>
-            <div class="info" id="info-section-1">
+            <div class="info" id="info-section-1" style="display: none;">
                 <input type="text" value="Cat Name: Mittens" readonly>
                 <input type="text" value="Breed: Persian" readonly>
                 <input type="text" value="Age: 2 years" readonly>
@@ -31,7 +31,7 @@
         <div class="image-container">
             <img src="image3.jpg" alt="Cat 3" loading="lazy">
             <button class="toggle-btn" onclick="toggleInfo(2)">Show More Info</button>
-            <div class="info" id="info-section-2">
+            <div class="info" id="info-section-2" style="display: none;">
                 <input type="text" value="Cat Name: Tiger" readonly>
                 <input type="text" value="Breed: Bengal" readonly>
                 <input type="text" value="Age: 3 years" readonly>
@@ -53,10 +53,10 @@
             const button = infoSection.previousElementSibling;
 
             if (infoSection.style.display === "none" || infoSection.style.display === "") {
-                infoSection.style.display = "block";
+                infoSection.style.display = "block"; // Show the info
                 button.textContent = "Hide Info";
             } else {
-                infoSection.style.display = "none";
+                infoSection.style.display = "none"; // Hide the info
                 button.textContent = "Show More Info";
             }
         }
