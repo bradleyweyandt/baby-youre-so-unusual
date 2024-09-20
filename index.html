@@ -8,10 +8,54 @@
 </head>
 <body>
     <div class="gallery">
-        <img src="images/cat.jpg" alt="catdog" loading="lazy">
-        <img src="image2.jpg" alt="Image 2">
-        <img src="image3.jpg" alt="Image 3">
-        <!-- Add more images as needed -->
+        <div class="image-container">
+            <img src="images/cat.jpg" alt="Cat 1" loading="lazy">
+            <button class="toggle-btn" onclick="toggleInfo(0)">Show More Info</button>
+            <div class="info" id="info-section-0">
+                <input type="text" value="Cat Name: Whiskers" readonly>
+                <input type="text" value="Breed: Maine Coon" readonly>
+                <input type="text" value="Age: 4 years" readonly>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <img src="image2.jpg" alt="Cat 2" loading="lazy">
+            <button class="toggle-btn" onclick="toggleInfo(1)">Show More Info</button>
+            <div class="info" id="info-section-1">
+                <input type="text" value="Cat Name: Mittens" readonly>
+                <input type="text" value="Breed: Persian" readonly>
+                <input type="text" value="Age: 2 years" readonly>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <img src="image3.jpg" alt="Cat 3" loading="lazy">
+            <button class="toggle-btn" onclick="toggleInfo(2)">Show More Info</button>
+            <div class="info" id="info-section-2">
+                <input type="text" value="Cat Name: Tiger" readonly>
+                <input type="text" value="Breed: Bengal" readonly>
+                <input type="text" value="Age: 3 years" readonly>
+            </div>
+        </div>
     </div>
+
+    <script>
+        function toggleInfo(index) {
+            const infoSection = document.getElementById(`info-section-${index}`);
+            const button = infoSection.previousElementSibling;
+
+            if (infoSection.style.display === "none" || infoSection.style.display === "") {
+                infoSection.style.display = "block";
+                button.textContent = "Hide Info";
+            } else {
+                infoSection.style.display = "none";
+                button.textContent = "Show More Info";
+            }
+        }
+    </script>
 </body>
 </html>
+<!-- terminal -->
+<!-- git add .
+git commit -m "message"   
+git push origin main -->
