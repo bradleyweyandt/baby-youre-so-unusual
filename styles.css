@@ -36,7 +36,7 @@ body {
 .gallery p {
     text-align: left; /* Ensures text is left-aligned */
     margin: 10px 0; /* Adds spacing between the text and image */
-    font-size: 10px;
+    font-size: 12px;
 }
 
 /* Mobile Styles */
