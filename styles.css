@@ -20,11 +20,13 @@ body {
     width: 100%;
     max-width: 1200px;
     height: auto;
+    object-fit: contain; /* Ensures the entire image fits without cropping */
 }
 
-/* Adjust image size for mobile screens */
+/* Maintain aspect ratio on smaller screens */
 @media (max-width: 600px) {
     .gallery img {
         max-width: 90%;
+        height: auto; /* Ensures aspect ratio is preserved */
     }
 }
