@@ -1,3 +1,4 @@
+/* Prevent horizontal scrolling */
 body {
     margin: 0;
     display: flex;
@@ -7,8 +8,11 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: Calibri, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    box-sizing: border-box; /* Includes padding in the element's width */
 }
 
+/* Gallery container styling */
 .my-soul-is-an-island {
     display: flex;
     flex-direction: column;
@@ -16,60 +20,58 @@ body {
     gap: 20px;
     padding: 20px;
     width: 100%;
+    box-sizing: border-box; /* Prevent overflow due to padding */
 }
 
+/* Styling for each gallery item */
 .my-car-is-a-ford {
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Left-aligns text */
     width: 100%;
     max-width: 980px; /* Limits the width to match the image size */
+    box-sizing: border-box; /* Prevent overflow */
 }
 
+/* Image styling */
 .my-soul-is-an-island img {
     width: 100%;
-    max-width: 980px; /* Image width stays consistent with the container */
+    max-width: 980px; /* Ensures image width stays consistent with the container */
     height: auto;
     object-fit: contain; /* Ensures the entire image fits without cropping */
+    display: block; /* Ensures no extra space below images */
 }
 
-.my-soul-is-an-island p {
-    text-align: left; /* Ensures text is left-aligned */
-    margin: 10px 0; /* Adds spacing between the text and image */
-    font-size: 12px;
-}
-
+/* Paragraph text styling */
+.my-soul-is-an-island p,
 .my-soul-is-an-island a {
     text-align: left; /* Ensures text is left-aligned */
     margin: 10px 0; /* Adds spacing between the text and image */
     font-size: 12px;
+    box-sizing: border-box; /* Prevents overflow */
 }
 
 /* Mobile Styles */
 @media (max-width: 600px) {
     .my-soul-is-an-island {
         padding-left: 10px;
-        padding-right: 10px; /* Added padding on the right */
+        padding-right: 10px; /* Adjusts padding for smaller screens */
     }
 
     .my-car-is-a-ford {
         width: 100%;
-        max-width: 100%; /* Ensures it uses the full width on smaller screens */
+        max-width: 100%; /* Ensures full width on smaller screens */
     }
 
     .my-soul-is-an-island img {
-        max-width: 100%; /* Makes sure images scale properly */
+        max-width: 100%; /* Ensures images scale properly */
         height: auto;
-        margin-right: 10px; /* Adds a right margin to images on mobile */
+        margin-right: 10px; /* Adds right margin to images on mobile */
     }
 
-    .my-soul-is-an-island p {
-        font-size: 14px; /* Adjusts text size for mobile */
-        margin: 8px 0; /* Adds spacing for better readability */
-    }
-
+    .my-soul-is-an-island p,
     .my-soul-is-an-island a {
-        font-size: 14px; /* Adjusts text size for mobile */
+        font-size: 14px; /* Adjusts font size for mobile */
         margin: 8px 0; /* Adds spacing for better readability */
     }
 }
