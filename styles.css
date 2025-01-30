@@ -16,6 +16,12 @@ body {
     padding: 20px;
 }
 
+.gallery p {
+    text-align: left; /* Ensures text is left-aligned */
+    width: 100%; /* Allows text to take full width */
+    max-width: 1000px; /* Matches the image width */
+}
+
 .gallery img {
     width: 100%;
     max-width: 1000px;
