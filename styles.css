@@ -39,6 +39,15 @@ body {
     object-fit: contain; /* Ensures the entire image fits without cropping */
 }
 
+/* About section right-aligned */
+.about {
+    text-align: right;
+    max-width: 980px; /* Matches image width */
+    margin: 40px auto 20px;
+    padding-right: 20px;
+    font-family: Calibri, sans-serif;
+}
+
 /* Adjust padding and image size for mobile screens */
 @media (max-width: 600px) {
     .gallery {
@@ -50,12 +59,5 @@ body {
     .gallery img {
         max-width: 90%;
         height: auto; /* Ensures aspect ratio is preserved */
-    }
-    .about {
-        text-align: right;
-        max-width: 1200px;
-        margin: 40px auto 20px;
-        padding-right: 20px;
-        font-family: Calibri, sans-serif;
     }
 }
