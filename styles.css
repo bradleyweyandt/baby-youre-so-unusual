@@ -43,7 +43,7 @@ body {
 @media (max-width: 600px) {
     .gallery {
         padding-left: 10px;
-        padding-right: 10px;
+        padding-right: 10px; /* Added padding on the right */
     }
 
     .gallery-item {
@@ -54,6 +54,7 @@ body {
     .gallery img {
         max-width: 100%; /* Makes sure images scale properly */
         height: auto;
+        margin-right: 10px; /* Adds a right margin to images on mobile */
     }
 
     .gallery p {
