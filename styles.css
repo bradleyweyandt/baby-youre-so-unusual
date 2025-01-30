@@ -39,25 +39,31 @@ body {
     object-fit: contain; /* Ensures the entire image fits without cropping */
 }
 
-/* About section right-aligned */
+/* About section aligned with the right edge of images */
 .about {
-    text-align: right;
     max-width: 980px; /* Matches image width */
+    width: 100%;
+    text-align: right;
     margin: 40px auto 20px;
-    padding-right: 20px;
+    padding-right: calc((100vw - 980px) / 2); /* Pushes text to align with the right edge of images */
     font-family: Calibri, sans-serif;
 }
 
 /* Adjust padding and image size for mobile screens */
 @media (max-width: 600px) {
     .gallery {
-        padding-left: 10px;  /* Reduced padding on the left */
-        padding-right: 10px; /* Reduced padding on the right */
-        gap: 10px; 
+        padding-left: 10px;
+        padding-right: 10px;
+        gap: 10px;
     }
 
     .gallery img {
         max-width: 90%;
-        height: auto; /* Ensures aspect ratio is preserved */
+        height: auto;
+    }
+
+    .about {
+        max-width: 90%;
+        padding-right: 10px; /* Align with the right edge of images on mobile */
     }
 }
