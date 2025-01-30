@@ -23,8 +23,13 @@ body {
     object-fit: contain; /* Ensures the entire image fits without cropping */
 }
 
-/* Maintain aspect ratio on smaller screens */
+/* Adjust padding and image size for mobile screens */
 @media (max-width: 600px) {
+    .gallery {
+        padding-left: 10px;  /* Reduced padding on the left */
+        padding-right: 10px; /* Reduced padding on the right */
+    }
+
     .gallery img {
         max-width: 90%;
         height: auto; /* Ensures aspect ratio is preserved */
