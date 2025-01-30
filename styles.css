@@ -2,7 +2,7 @@ body {
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Aligns the content to the top */
     background-color: #f0f0f0;
     flex-direction: column;
     min-height: 100vh;
@@ -15,26 +15,27 @@ body {
     align-items: center; /* Keeps images centered */
     gap: 20px;
     padding: 20px;
+    width: 100%;
 }
 
 .gallery-item {
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Left-aligns text */
-    max-width: 1000px; /* Matches image width */
     width: 100%;
+    max-width: 980px; /* Limits the width to match the image size */
 }
 
 .gallery img {
     width: 100%;
-    max-width: 1000px;
+    max-width: 980px; /* Image width stays consistent with the container */
     height: auto;
     object-fit: contain; /* Ensures the entire image fits without cropping */
 }
 
 .gallery p {
     text-align: left; /* Ensures text is left-aligned */
-    margin: 5px 0; /* Adds spacing */
+    margin: 10px 0; /* Adds spacing between the text and image */
     font-size: 16px;
 }
 
@@ -46,16 +47,17 @@ body {
     }
 
     .gallery-item {
-        max-width: 90%; /* Makes text & images scale properly */
+        width: 100%;
+        max-width: 100%; /* Ensures it uses the full width on smaller screens */
     }
 
     .gallery img {
-        max-width: 100%; /* Prevents images from overflowing */
+        max-width: 100%; /* Makes sure images scale properly */
         height: auto;
     }
 
     .gallery p {
-        font-size: 14px; /* Slightly smaller text for mobile */
-        margin-bottom: 5px;
+        font-size: 14px; /* Adjusts text size for mobile */
+        margin: 8px 0; /* Adds spacing for better readability */
     }
 }
