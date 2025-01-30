@@ -39,6 +39,12 @@ body {
     font-size: 12px;
 }
 
+.gallery a {
+    text-align: left; /* Ensures text is left-aligned */
+    margin: 10px 0; /* Adds spacing between the text and image */
+    font-size: 12px;
+}
+
 /* Mobile Styles */
 @media (max-width: 600px) {
     .gallery {
@@ -58,6 +64,11 @@ body {
     }
 
     .gallery p {
+        font-size: 14px; /* Adjusts text size for mobile */
+        margin: 8px 0; /* Adds spacing for better readability */
+    }
+
+    .gallery a {
         font-size: 14px; /* Adjusts text size for mobile */
         margin: 8px 0; /* Adds spacing for better readability */
     }
