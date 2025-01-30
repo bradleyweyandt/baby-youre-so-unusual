@@ -8,72 +8,10 @@
 </head>
 <body>
     <div class="gallery">
-        <div class="image-container">
-            <img src="images/twinklerorsparkler_01_exhibitionshot.jpg" alt="Exhibition shot of Twinkler or Sparkler" loading="lazy">
-            <br />
-            <button class="toggle-btn" onclick="toggleInfo(0)">+</button>
-            <div class="info" id="info-section-0" style="display: none;">
-                <table class="info-table">
-                    <tr>
-                        <td><strong>Title:</strong></td>
-                        <td>Exhibition shot</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Medium:</strong></td>
-                        <td>Mylar and monofilament</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Size:</strong></td>
-                        <td>110" x 84"</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
+        <img src="images/twinklerorsparkler_01_exhibitionshot.jpg" alt="Exhibition shot of Twinkler or Sparkler" loading="lazy">
+        <img src="image2.jpg" alt="Cat 2" loading="lazy">
+        <img src="image3.jpg" alt="Cat 3" loading="lazy">
     </div>
-
-        <div class="image-container">
-            <img src="image2.jpg" alt="Cat 2" loading="lazy">
-            <button class="toggle-btn" onclick="toggleInfo(1)">-</button>
-            <div class="info" id="info-section-1" style="display: none;">
-                <input type="text" value="Cat Name: Mittens" readonly>
-                <input type="text" value="Breed: Persian" readonly>
-                <input type="text" value="Age: 2 years" readonly>
-            </div>
-        </div>
-
-        <div class="image-container">
-            <img src="image3.jpg" alt="Cat 3" loading="lazy">
-            <button class="toggle-btn" onclick="toggleInfo(2)">Show More Info</button>
-            <div class="info" id="info-section-2" style="display: none;">
-                <input type="text" value="Cat Name: Tiger" readonly>
-                <input type="text" value="Breed: Bengal" readonly>
-                <input type="text" value="Age: 3 years" readonly>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Ensure all info sections are hidden on page load
-        window.onload = function() {
-            const infoSections = document.querySelectorAll('.info');
-            infoSections.forEach(section => {
-                section.style.display = 'none';
-            });
-        };
-
-        function toggleInfo(index) {
-            const infoSection = document.getElementById(`info-section-${index}`);
-            const button = infoSection.previousElementSibling;
-
-            if (infoSection.style.display === "none" || infoSection.style.display === "") {
-                infoSection.style.display = "block"; // Show the info
-                button.textContent = "Hide Info";
-            } else {
-                infoSection.style.display = "none"; // Hide the info
-                button.textContent = "Show More Info";
-            }
-        }
-    </script>
 </body>
 </html>
 <!-- terminal -->

@@ -1,17 +1,16 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #f0f0f0;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 .gallery {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 20px;
     padding: 20px;
@@ -21,8 +20,6 @@ body {
     width: 100%;
     max-width: 1200px;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Adjust image size for mobile screens */
@@ -30,58 +27,4 @@ body {
     .gallery img {
         max-width: 90%;
     }
-}
-
-/* The container for the information */
-.info {
-    display: none;
-    text-align: center;
-    margin-top: 10px;
-}
-
-/* Button styling */
-.toggle-btn {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    display: inline-block;
-    margin: 10px auto;
-}
-
-.toggle-btn:hover {
-    background-color: #0056b3;
-}
-
-/* Read-only input styling */
-input[readonly] {
-    border: none;
-    background-color: #f1f1f1;
-    text-align: center;
-    margin: 5px 0;
-    width: 100%;
-}
-
-/* Styling for each image container */
-.image-container {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.info-table {
-    margin-left: auto; /* Pushes the table to the right */
-    margin-right: 0;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-.info-table td {
-    padding: 5px;
-    border: 1px solid #ccc;
-    text-align: left; /* Ensures text inside is left-aligned */
-}
-
-.info-table td:first-child {
-    font-weight: bold; /* Emphasizes labels */
 }
