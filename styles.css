@@ -18,7 +18,7 @@ body {
 
 .gallery img {
     width: 100%;
-    max-width: 640px;
+    max-width: 980px;
     height: auto;
     object-fit: contain; /* Ensures the entire image fits without cropping */
 }
