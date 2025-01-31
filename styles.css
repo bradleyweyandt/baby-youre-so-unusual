@@ -53,8 +53,8 @@ body {
 
 #only-an-angel-could-be-so-unusual {
     text-align: justify; /* Justifies text within the About section */
-    margin-top: 20px; /* Adds spacing between the last image and the About section */
-    padding: 20px;
+    margin-top: 0px; /* Adds spacing between the last image and the About section */
+    padding: 0px;
     max-width: 980px; /* Keeps the width in sync with the images */
 }
 
