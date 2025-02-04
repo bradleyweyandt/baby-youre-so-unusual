@@ -10,6 +10,7 @@ body {
     font-family: Calibri, sans-serif;
     overflow-x: hidden; /* Prevent horizontal scrolling */
     box-sizing: border-box; /* Includes padding in the element's width */
+    text-transform: lowercase;
 }
 
 /* Gallery container styling */
@@ -24,7 +25,15 @@ body {
 }
 
 /* Styling for each gallery item */
-.my-car-is-a-ford {
+.as-if-you-could-outrun-me {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left-aligns text */
+    width: 100%;
+    max-width: 980px; /* Limits the width to match the image size */
+    box-sizing: border-box; /* Prevent overflow */
+}
+.as-if-you-could-fight-me-off {
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Left-aligns text */
@@ -50,12 +59,40 @@ body {
     font-size: 12px;
     box-sizing: border-box; /* Prevents overflow */
 }
+/* Glitter strand effect */
+.glitter {
+    position: absolute;
+    width: 1.5px; /* Smaller glitter size */
+    height: 1.5px; /* Smaller glitter size */
+    background-color: #c0c0c0; /* Silver glitter */
+    border-radius: 50%;
+    animation: glitter 0.5s linear infinite;
+    pointer-events: none; /* Prevent glitter from blocking clicks */
+    z-index: -1; /* Ensure glitter is behind other elements */
+}
 
-#only-an-angel-could-be-so-unusual {
-    text-align: justify; /* Justifies text within the About section */
-    margin-top: 0px; /* Adds spacing between the last image and the About section */
-    padding: 2px;
-    max-width: 980px; /* Keeps the width in sync with the images */
+/* Keyframes for glitter animation with scaling and opacity changes */
+@keyframes glitter {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Optional: Add different animation delays for multiple glitter strands */
+.glitter:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.glitter:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.glitter:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.tiger-uppercut {
+    text-transform: uppercase;
 }
 
 /* Mobile Styles */
@@ -65,7 +102,7 @@ body {
         padding-right: 10px; /* Adjusts padding for smaller screens */
     }
 
-    .my-car-is-a-ford {
+    .as-if-you-could-outrun-me {
         width: 100%;
         max-width: 100%; /* Ensures full width on smaller screens */
     }
