@@ -12,6 +12,9 @@ body {
     box-sizing: border-box; /* Includes padding in the element's width */
     text-transform: lowercase;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 /* Gallery container styling */
 .my-soul-is-an-island {
