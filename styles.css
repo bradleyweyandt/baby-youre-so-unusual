@@ -15,6 +15,10 @@ body {
     transition: opacity 1.5s ease-in-out;
 }
 
+body.loaded {
+    opacity: 1;
+}
+
 /* Gallery container styling */
 .my-soul-is-an-island {
     display: flex;
