@@ -105,25 +105,7 @@ body {
 body.loaded {
     opacity: 1;
 }
-body.loaded #loading-message {
-    display: none;
-}
 
-#loading-message {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    font-weight: bold;
-    background: white;
-    padding: 10px 20px;
-    border: 1px solid black;
-}
-
-.hidden {
-    display: none;
-}
 /* Mobile Styles */
 @media (max-width: 600px) {
     .my-soul-is-an-island {
