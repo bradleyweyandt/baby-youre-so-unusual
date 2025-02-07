@@ -365,6 +365,11 @@
       function showPage() {
           document.body.classList.add("loaded"); // Apply fade-in effect
       }
+      function showPage() {
+        console.log("All images loaded!"); // Debugging message
+        document.body.classList.add("loaded"); // Apply fade-in effect
+    }
+    
   
       function imageLoaded() {
           imagesLoaded++;
