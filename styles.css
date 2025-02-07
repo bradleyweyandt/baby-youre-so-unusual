@@ -95,14 +95,18 @@ body {
     text-transform: uppercase;
 }
 
-/* Initially hide the entire page */
+/* Ensure content fades in properly (Fixes Safari Private Mode issue) */
 body {
-    opacity: 0;
+    opacity: 1; /* Set to 1 initially */
     transition: opacity 1.5s ease-in-out;
 }
 
-/* Once loaded, make it visible */
-body.loaded {
+/* Apply the fade effect only if JavaScript is working */
+body.fade-effect {
+    opacity: 0;
+}
+
+body.fade-effect.loaded {
     opacity: 1;
 }
 

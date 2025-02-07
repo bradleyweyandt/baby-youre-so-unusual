@@ -358,36 +358,13 @@
     }
     </script>
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      let images = document.querySelectorAll("img");
-      let totalImages = images.length;
-      let imagesLoaded = 0;
-  
-      function showPage() {
-        console.log("All images loaded!"); // Debugging message
-          document.body.classList.add("loaded"); // Apply fade-in effect
-      }
-  
-      function imageLoaded() {
-          imagesLoaded++;
-          if (imagesLoaded === totalImages) {
-              showPage();
-          }
-      }
-  
-      images.forEach(img => {
-          if (img.complete) {
-              imageLoaded();
-          } else {
-              img.addEventListener("load", imageLoaded);
-              img.addEventListener("error", imageLoaded); // Handle broken images
-          }
+      document.addEventListener("DOMContentLoaded", function () {
+          document.body.classList.add("fade-effect");
+          setTimeout(() => {
+              document.body.classList.add("loaded");
+          }, 100);
       });
-  });
-  window.addEventListener("load", function () {
-    document.body.classList.add("loaded"); // Only fade in after everything loads
-});
-  </script>
+    </script>
 </body>
 
 </html>
