@@ -11,7 +11,14 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
     box-sizing: border-box; /* Includes padding in the element's width */
     text-transform: lowercase;
-}
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    }
+    
+    /* Once loaded, make it visible */
+    body.loaded {
+        opacity: 1;
+    }
 
 /* Gallery container styling */
 .my-soul-is-an-island {

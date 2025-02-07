@@ -357,6 +357,13 @@
       ]
     }
   </script>
+  <script>function showPage() {
+    document.body.classList.add("loaded"); // Apply the class to fade in
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(showPage, 5000); // Wait 5 seconds, then reveal the page
+});</script>
 </body>
 
 </html>
