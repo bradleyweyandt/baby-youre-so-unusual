@@ -357,6 +357,53 @@
       ]
     }
     </script>
+    <script>
+      document.body.style.opacity = "0"; // Ensure it's hidden at first
+  
+      function showPage() {
+          document.body.classList.add("loaded"); // Reveal the page
+      }
+  
+      function checkImagesLoaded() {
+          let images = document.querySelectorAll("img");
+          let totalImages = images.length;
+          let imagesLoaded = 0;
+  
+          function imageLoaded() {
+              imagesLoaded++;
+              if (imagesLoaded === totalImages) {
+                  showPage();
+              }
+          }
+  
+          // If there are no images, just show the page after 5 sec
+          if (totalImages === 0) {
+              setTimeout(showPage, 5000);
+              return;
+          }
+  
+          // Check if images are already cached
+          let allCached = true;
+          images.forEach(img => {
+              if (!img.complete) {
+                  allCached = false;
+                  img.addEventListener("load", imageLoaded);
+                  img.addEventListener("error", imageLoaded); // Handle errors
+              }
+          });
+  
+          // If all images are already loaded from cache, show instantly
+          if (allCached) {
+              showPage();
+          } else {
+              // Otherwise, wait 5 sec as a fallback
+              setTimeout(showPage, 5000);
+          }
+      }
+  
+      document.addEventListener("DOMContentLoaded", checkImagesLoaded);
+  </script>
+  
 </body>
 
 </html>
