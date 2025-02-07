@@ -95,6 +95,17 @@ body {
     text-transform: uppercase;
 }
 
+/* Initially hide the entire page */
+body {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+/* Once loaded, make it visible */
+body.loaded {
+    opacity: 1;
+}
+
 /* Mobile Styles */
 @media (max-width: 600px) {
     .my-soul-is-an-island {
