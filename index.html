@@ -359,10 +359,27 @@
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-          document.body.classList.add("fade-effect");
-          setTimeout(() => {
-              document.body.classList.add("loaded");
-          }, 100);
+          let images = document.querySelectorAll("img");
+          let totalImages = images.length;
+          let imagesLoaded = 0;
+  
+          function checkAllImagesLoaded() {
+              imagesLoaded++;
+              if (imagesLoaded === totalImages) {
+                  document.getElementById("loading-screen").style.display = "none"; // Hide loading screen
+                  document.querySelector(".my-soul-is-an-island").style.display = "block"; // Show content
+                  document.body.classList.add("loaded"); // Apply fade-in effect
+              }
+          }
+  
+          images.forEach(img => {
+              if (img.complete) {
+                  checkAllImagesLoaded();
+              } else {
+                  img.addEventListener("load", checkAllImagesLoaded);
+                  img.addEventListener("error", checkAllImagesLoaded); // Handle broken images
+              }
+          });
       });
     </script>
 </body>
