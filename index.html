@@ -357,34 +357,31 @@
       ]
     }
     </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-          let images = document.querySelectorAll("img");
-          let totalImages = images.length;
-          let imagesLoaded = 0;
-          let maxWaitTime = 5000; // 5 seconds max wait
-      
-          // Check if all images are loaded
-          images.forEach(img => {
-              if (img.complete) {
-                  imagesLoaded++;
-              } else {
-                  img.addEventListener("load", imageLoaded);
-                  img.addEventListener("error", imageLoaded); // Handle broken images
-              }
-          });
-      
-          function imageLoaded() {
-              imagesLoaded++;
-              if (imagesLoaded === totalImages) {
-                  showPage();
-              }
+    document.addEventListener("DOMContentLoaded", function () {
+      let images = document.querySelectorAll("img");
+      let totalImages = images.length;
+      let imagesLoaded = 0;
+  
+      function showPage() {
+          document.body.classList.add("loaded"); // Apply fade-in effect
+      }
+  
+      function imageLoaded() {
+          imagesLoaded++;
+          if (imagesLoaded === totalImages) {
+              showPage();
           }
-      
-          // Force show page if it takes too long (prevents blank screen)
-
+      }
+  
+      images.forEach(img => {
+          if (img.complete) {
+              imageLoaded();
+          } else {
+              img.addEventListener("load", imageLoaded);
+              img.addEventListener("error", imageLoaded); // Handle broken images
+          }
       });
-      </script>
+  });
 </body>
 
 </html>
