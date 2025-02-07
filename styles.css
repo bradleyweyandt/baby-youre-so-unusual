@@ -105,6 +105,8 @@ body {
 body.loaded {
     opacity: 1;
 }
+body.loaded #loading-message {
+    display: none;
 
 /* Mobile Styles */
 @media (max-width: 600px) {
