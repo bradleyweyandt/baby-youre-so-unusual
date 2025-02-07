@@ -362,8 +362,10 @@
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    setTimeout(showPage, 1000); // Wait 5 seconds, then reveal the page
-});</script>
+    setTimeout(() => {
+        document.body.classList.add("loaded"); // Reveal after 5 seconds
+    }, 5000);
+});
 </body>
 
 </html>
