@@ -107,7 +107,7 @@ body.loaded {
 }
 body.loaded #loading-message {
     display: none;
-
+}
 /* Mobile Styles */
 @media (max-width: 600px) {
     .my-soul-is-an-island {
