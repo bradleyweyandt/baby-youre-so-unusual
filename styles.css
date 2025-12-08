@@ -21,7 +21,13 @@ body {
         visibility: visible;
         opacity: 1;
     }
-
+    hr {
+        border: none; /* Removes default border */
+        height: 1px; /* Sets the height of the line */
+        background-color: #000000; /* Sets the color of the line */
+        margin: 5px 0; /* Adds space above and below the line */
+        width: 70%; /* Sets the width of the line */
+    }
 /* Gallery container styling */
 .my-soul-is-an-island {
     display: flex;
